@@ -46,6 +46,7 @@ import WFV474PGV from './devices/WFV474PGV'
 import WLREL6323S from './devices/WLREL6323S'
 import D0211 from './devices/D0211'
 import F14X71WHST_AGWQPFS from './devices/F14X71WHST.AGWQPFS'
+import VCEWL2QEUK from './devices/VCEWL2QEUK'
 import { Device as T1Device } from './thinq1/device'
 import { Device as T2Device } from './thinq2/device'
 import { type Connection } from './homeassistant'
@@ -86,7 +87,7 @@ const t2deviceTypes: Record<string, T2Factory> = {
     'Y_V8_F___W.B_2QEUK': Y_V8_F___W_B_2QEUK,
     VCDWL2QEUK, // LG F4X7511TWS front-load washer (matched on modelId VCDWL2QEUK)
     'F14X71WHST.AGWQPFS': F14X71WHST_AGWQPFS, // WCEWL2QEUK, LG F14X71WHST front-load washer
-    'VCEWL2QEUK': F14X71WHST_AGWQPFS, // WCEWL2QEUK, LG F14X71WHST front-load washer
+    'VCEWL2QEUK': VCEWL2QEUK,   
     'F_V__F___W.B_1QEUK': F_V__F___W_B_1QEUK,
     'F_C__Y___W.A__QEUK': F_C__Y___W_A__QEUK,
     'F_VB_F___W.B_2QEUK': F_VB_F___W_B_2QEUK, // LG CV74J7S2QA washer/dryer combo
