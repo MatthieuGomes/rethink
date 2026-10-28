@@ -177,14 +177,14 @@ export default class Device extends AABBDevice {
                         options: ERRORS.options,
                     },
                     course: {
-                        platform: 'sensor',
+                        platform: 'select',
                         unique_id: '$deviceid-course',
                         state_topic: '$this/course',
                         name: 'Course',
                         icon: 'mdi:pin-outline',
                     },
                     temp: {
-                        platform: 'sensor',
+                        platform: 'select',
                         unique_id: '$deviceid-temp',
                         state_topic: '$this/temp',
                         name: 'Temperature',
@@ -192,7 +192,7 @@ export default class Device extends AABBDevice {
                         options: TEMPERATURES.options,
                     },
                     spin: {
-                        platform: 'sensor',
+                        platform: 'select',
                         unique_id: '$deviceid-spin',
                         state_topic: '$this/spin',
                         name: 'Spin',
@@ -201,7 +201,7 @@ export default class Device extends AABBDevice {
                         options: SPINS.options,
                     },
                     cycles: {
-                        platform: 'sensor',
+                        platform: 'select',
                         unique_id: '$deviceid-cycles',
                         state_topic: '$this/cycles',
                         name: 'Cycle count',
@@ -264,7 +264,7 @@ export default class Device extends AABBDevice {
                         icon: 'mdi:timer-sand',
                     },
                     rinse: {
-                        platform: 'sensor',
+                        platform: 'select',
                         unique_id: '$deviceid-rinse',
                         state_topic: '$this/rinse',
                         name: 'Rinse',
@@ -280,21 +280,21 @@ export default class Device extends AABBDevice {
                         icon: 'mdi:water-plus',
                     },
                     turbowash: {
-                        platform: 'binary_sensor',
+                        platform: 'switch',
                         unique_id: '$deviceid-turbowash',
                         state_topic: '$this/turbowash',
                         name: 'TurboWash',
                         icon: 'mdi:rocket-launch',
                     },
                     prewash: {
-                        platform: 'binary_sensor',
+                        platform: 'switch',
                         unique_id: '$deviceid-prewash',
                         state_topic: '$this/prewash',
                         name: 'Pre-wash',
                         icon: 'mdi:water-sync',
                     },
                     soil: {
-                        platform: 'sensor',
+                        platform: 'select',
                         unique_id: '$deviceid-soil',
                         state_topic: '$this/soil',
                         name: 'Soil level',
@@ -304,7 +304,7 @@ export default class Device extends AABBDevice {
                     },
                     intensive_wash: tombstone('binary_sensor'),
                     steam: {
-                        platform: 'binary_sensor',
+                        platform: 'switch',
                         unique_id: '$deviceid-steam',
                         state_topic: '$this/steam',
                         name: 'Steam',
