@@ -607,17 +607,17 @@ export default class Device extends AABBDevice {
             }
         } else if ((this.SELECT_SETTABLE_PROPERTIES).includes(prop)) {
             this.publishProperty(prop, mqttValue);
-        } 
+        }
         else if ((this.SETTABLE_PROPERTIES).includes(prop)) {
             const currentState = this.publishCache
-            const currentTemp = String( prop=="temp" ? mqttValue : currentState.get('temp'))
-            const currentSpin = String( prop=="spin" ? mqttValue : currentState.get('spin'))
-            const currentRinse = String (prop=="rinse" ? mqttValue : currentState.get('rinse'))
-            const currentSoil = String( prop=="soil" ? mqttValue : currentState.get('soil'))
-            const currentCourse = String( prop=="course" ? mqttValue : currentState.get('course'))
-            const currentTurbowash = String( prop=="turbowash" ? mqttValue : currentState.get('turbowash'))
-            const currentPrewash = String( prop=="prewash" ? mqttValue : currentState.get('prewash'))
-            const currentSteam = String( prop=="steam" ? mqttValue : currentState.get('steam'))
+            const currentTemp = String(prop == "temp" ? mqttValue : currentState.get('temp'))
+            const currentSpin = String(prop == "spin" ? mqttValue : currentState.get('spin'))
+            const currentRinse = String(prop == "rinse" ? mqttValue : currentState.get('rinse'))
+            const currentSoil = String(prop == "soil" ? mqttValue : currentState.get('soil'))
+            const currentCourse = String(prop == "course" ? mqttValue : currentState.get('course'))
+            const currentTurbowash = String(prop == "turbowash" ? mqttValue : currentState.get('turbowash'))
+            const currentPrewash = String(prop == "prewash" ? mqttValue : currentState.get('prewash'))
+            const currentSteam = String(prop == "steam" ? mqttValue : currentState.get('steam'))
             console.log('[DEBUG][SELECT] Current temp', currentTemp, 'spin', currentSpin, 'rinse', currentRinse, 'soil', currentSoil, 'course', currentCourse, 'turbowash', currentTurbowash, 'prewash', currentPrewash, 'steam', currentSteam)
             const course_index = COURSES.unmap(currentCourse || 'Not Specified')
             const temp_index = TEMPERATURES.unmap(currentTemp || 'Not specified')
