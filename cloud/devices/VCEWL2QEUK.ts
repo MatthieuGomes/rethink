@@ -183,6 +183,7 @@ export default class Device extends AABBDevice {
                         command_topic: '$this/course/set',
                         name: 'Course',
                         icon: 'mdi:pin-outline',
+                        options: COURSES.options,
                     },
                     temp: {
                         platform: 'select',
@@ -314,6 +315,7 @@ export default class Device extends AABBDevice {
                         platform: 'switch',
                         unique_id: '$deviceid-steam',
                         state_topic: '$this/steam',
+                        command_topic: '$this/steam/set',
                         name: 'Steam',
                         icon: 'mdi:kettle-steam',
                     },
