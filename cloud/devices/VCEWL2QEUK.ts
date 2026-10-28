@@ -392,7 +392,6 @@ export default class Device extends AABBDevice {
     start() {
         console.log(["DEBUG] Starting"])
         this.send(Buffer.from('F0E5000201FF00', 'hex'))
-
     }
     processAABB(buf: Buffer) {
         const bufLength = buf.length
@@ -621,6 +620,7 @@ export default class Device extends AABBDevice {
             console.log('[DEBUG][SELECT] Turbowash code', turbowash_code, '| prewash code', prewash_code, '| steam code', steam_code)
             const message = `F0E5000201FF090A${course_code}1E${soil_code}20${rinse_code}21${spin_code}1F${temp_code}3E${steam_code}35${turbowash_code}34${prewash_code}7F0000`
             console.log('[DEBUG] Sending message to change program on whasing machine', message)
+            this.send(Buffer.from(message, 'hex'))
         }
 
         if (prop === 'pause') this.send(Buffer.from('F024040100', 'hex'))
